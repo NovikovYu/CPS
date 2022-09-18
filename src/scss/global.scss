@@ -1,0 +1,73 @@
+@import 'mixins.scss'; //миксины
+@import 'variables.scss'; // переменные
+
+@font-face {
+  font-family: 'Comic';
+  src: url('../fonts/comic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'TT Lakes';
+  src: url('../fonts/TTLakes-Regular.eot');
+  src: local('TT Lakes Regular'), local('TTLakes-Regular'),
+      url('../fonts/TTLakes-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/TTLakes-Regular.woff') format('woff'),
+      url('../fonts/TTLakes-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Lakes';
+  src: url('../fonts/TTLakes-Medium.eot');
+  src: local('TT Lakes Medium'), local('TTLakes-Medium'),
+      url('../fonts/TTLakes-Medium.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/TTLakes-Medium.woff') format('woff'),
+      url('../fonts/TTLakes-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Lakes';
+  src: url('../fonts/TTLakes-Bold.eot');
+  src: local('TT Lakes Bold'), local('TTLakes-Bold'),
+      url('../fonts/TTLakes-Bold.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/TTLakes-Bold.woff') format('woff'),
+      url('../fonts/TTLakes-Bold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+body {
+  font-family: 'TT Lakes', sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 400;
+  color: $text;
+
+  &.fixed {
+    height: 100vh;
+    overflow: hidden;
+  }
+}
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button[class] {
+  border: none;
+  background-color: transparent;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+

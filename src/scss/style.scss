@@ -1,0 +1,23 @@
+@import 'normalize.scss'; // нормалайз
+@import 'global.scss'; // глобальные
+@import 'variables.scss'; // переменные
+@import 'mixins.scss'; // переменные
+@import 'swiper-bundle.scss'; // свайпер
+@import 'blocks/_body-container.scss'; // body-container
+@import 'blocks/_main-container.scss'; // main-container
+@import 'blocks/_container.scss'; // container
+@import 'blocks/_section-title.scss'; // заголовок секции
+@import 'blocks/_my-swiper.scss'; // общие стили для свайперов CPS
+@import 'blocks/_accent-round-btn.scss'; // круглая кнопка
+@import 'blocks/_clickable-element.scss'; // кликабельный элемент
+@import 'blocks/_add-btn.scss'; // кнопка добавления контента
+
+
+@import 'blocks/_header.scss'; // хедер
+@import 'blocks/_hero.scss'; // главная секция
+@import 'blocks/_brends.scss'; // секция бренды
+@import 'blocks/_types.scss'; // секция типы
+@import 'blocks/_prices.scss'; // секция цены
+@import 'blocks/_footer.scss'; // футер
+@import 'blocks/_feedback.scss'; // попап Обратная связь и попап Связаться с нами
+

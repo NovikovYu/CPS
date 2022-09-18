@@ -1,0 +1,11 @@
+.accent-round-btn[class] {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background-color: $pink;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: 17px 17px;
+  background-position: 11px 11px;
+}

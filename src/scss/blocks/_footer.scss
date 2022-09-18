@@ -1,0 +1,46 @@
+@import '../variables.scss';
+
+.footer {
+  border-top: 1px solid $aqua;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    column-gap: 35px;
+    row-gap: 15px;
+    padding-bottom: 15px;
+    line-height: 1.15;
+    color: $gray2;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      align-items: flex-start;
+      padding-bottom: 20px;
+    }
+  }
+
+  &__author {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+
+    @media (min-width: 768px) {
+      align-items: flex-start;
+    }
+  }
+
+  &__policy {
+    flex-shrink: 0;
+  }
+
+  &__terms{
+    max-width: 330px;
+    text-align: center;
+
+    @media (min-width: 768px) {
+      text-align: right;
+    }
+  }
+}

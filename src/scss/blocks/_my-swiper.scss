@@ -1,0 +1,56 @@
+@import '../mixins.scss'; //миксины
+@import '../variables.scss'; // переменные
+
+.my-swiper {
+  margin-bottom: 10px;
+  padding-left: 15px;
+  padding-bottom: 40px;
+
+  @media (min-width: 480px) {
+    padding: 0 25px;
+  }
+
+  &::before {
+    content: '';
+    z-index: 50;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 15px;
+    background: linear-gradient(270deg, $bgColor 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+    transform: rotate(180deg);
+  }
+
+  &::after {
+    content: '';
+    z-index: 50;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 15px;
+    background: linear-gradient(270deg, $bgColor 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+  }
+
+  &-wrapper {
+    @media (min-width: 480px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  &-pagination {
+
+    & .swiper-pagination-bullet {
+      width: 12px;
+      height: 12px;
+      background-color: $gray3;
+    }
+
+    & .swiper-pagination-bullet-active {
+      background-color: $gray4;
+    }
+  }
+}

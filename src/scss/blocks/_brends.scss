@@ -1,0 +1,79 @@
+@import '../mixins.scss'; //миксины
+@import '../variables.scss'; // переменные
+
+.brends {
+  &__cards {
+    padding-bottom: 60px;
+
+    @media (min-width: 480px) {
+      padding-bottom: 40px;
+    }
+    
+    &.active {
+      & .brends__cards-wrapper {
+        @media (min-width: 480px) {
+          max-height: fit-content;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+
+  &__cards-wrapper {
+    @media (min-width: 480px) {
+      column-gap: 10px;
+      row-gap: 15px;
+
+      max-height: 150px;
+      overflow: hidden;
+    }
+  }
+
+  &__card {
+    max-width: 240px;
+
+    @media (min-width: 480px) {
+      max-width: 220px;
+    }
+
+    @media (min-width: 980px) {
+      max-width: 240px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 240px;
+    min-width: 190px;
+    height: 72px;
+    padding: 10px 10px 10px 16px;
+    background-color: $white;
+    border: 1px solid $gray1;
+    border-radius: 6px;
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+    background-position-y: 16px;
+    background-position-x: calc(100% - 16px);
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='1' y='1' width='38' height='38' rx='19' stroke='%23FF3E79' stroke-width='2'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M21.5 20L17.7071 16.2071C17.3166 15.8166 17.3166 15.1834 17.7071 14.7929L17.7929 14.7071C18.1834 14.3166 18.8166 14.3166 19.2071 14.7071L23.7929 19.2929C24.1834 19.6834 24.1834 20.3166 23.7929 20.7071L19.2071 25.2929C18.8166 25.6834 18.1834 25.6834 17.7929 25.2929L17.7071 25.2071C17.3166 24.8166 17.3166 24.1834 17.7071 23.7929L21.5 20Z' fill='%23FF3E79'/%3E%3C/svg%3E");
+  }
+
+  &__logo {
+    max-width: 160px;
+    max-height: 52px;
+    object-fit: contain;
+  }
+
+  &__add-show-full-description {
+    margin-top: 25px;
+    display: none;
+
+    @media (min-width: 480px) {
+      display: flex;
+    }
+  }
+}
+
+
+
