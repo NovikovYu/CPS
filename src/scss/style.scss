@@ -1,8 +1,8 @@
-@import 'normalize.scss'; // нормалайз
+@import '../../node_modules/normalize.css/normalize.css'; // нормалайз
+@import '../../node_modules/swiper/swiper-bundle.css'; // свайпер
 @import 'global.scss'; // глобальные
 @import 'variables.scss'; // переменные
-@import 'mixins.scss'; // переменные
-@import 'swiper-bundle.scss'; // свайпер
+@import 'mixins.scss'; // миксины
 @import 'blocks/_body-container.scss'; // body-container
 @import 'blocks/_main-container.scss'; // main-container
 @import 'blocks/_container.scss'; // container
@@ -11,7 +11,6 @@
 @import 'blocks/_accent-round-btn.scss'; // круглая кнопка
 @import 'blocks/_clickable-element.scss'; // кликабельный элемент
 @import 'blocks/_add-btn.scss'; // кнопка добавления контента
-
 
 @import 'blocks/_header.scss'; // хедер
 @import 'blocks/_hero.scss'; // главная секция

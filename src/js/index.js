@@ -102,48 +102,45 @@ if (document.querySelector('.js_add_btn')) {
   })
 }
 
-//попап Обратная связь
-if (document.querySelector('.js_feedback')) {
-  const popup = document.querySelector('.js_feedback');
-  const openBtn = document.querySelector('.js_feedback_open_btn');
-  const closeBtn = document.querySelector('.js_feedback_close_btn');
-  const popupBg = document.querySelector('.js_feedback_bg');
+// попапы
+// открытие и закрытие попапа
+function openOrClosePopup(popupClass, openBtnClass, closeBtnClass, popupBgClass) {
+  if (document.querySelector(popupClass)) {
+    const popup = document.querySelector(popupClass);
+    const openBtn = document.querySelector(openBtnClass);
+    const closeBtn = document.querySelector(closeBtnClass);
+    const popupBg = document.querySelector(popupBgClass);
 
-  openBtn.addEventListener('click', () => {
-    popup.classList.add('active');
-    body.classList.add('fixed');
-  })
+    openBtn.addEventListener('click', () => {
+      popup.classList.add('active');
+      body.classList.add('fixed');
+    })
 
-  closeBtn.addEventListener('click', () => {
-    popup.classList.remove('active');
-    body.classList.remove('fixed');
-  })
+    closeBtn.addEventListener('click', () => {
+      popup.classList.remove('active');
+      checkMenuAndUnfixBody();
+    })
 
-  popupBg.addEventListener('click', () => {
-    popup.classList.remove('active');
-    body.classList.remove('fixed');
-  })
+    popupBg.addEventListener('click', () => {
+      popup.classList.remove('active');
+      checkMenuAndUnfixBody();
+    })
+  }
 }
+
+//снимаем фиксацию с body при закртии попапа, если не открыто левое меню
+function checkMenuAndUnfixBody() {
+  const header = document.querySelector('.js_header_top');
+
+  if (header.classList.contains('active')) {
+
+  } else {
+    body.classList.remove('fixed');
+  }
+}
+
+//попап Обратная связь
+openOrClosePopup('.js_feedback', '.js_feedback_open_btn', '.js_feedback_close_btn', '.js_feedback_bg');
 
 //попап Заказать звонок
-if (document.querySelector('.js_call_back')) {
-  const popup = document.querySelector('.js_call_back');
-  const openBtn = document.querySelector('.js_call_back_open_btn');
-  const closeBtn = document.querySelector('.js_call_back_close_btn');
-  const popupBg = document.querySelector('.js_call_back_bg');
-
-  openBtn.addEventListener('click', () => {
-    popup.classList.add('active');
-    body.classList.add('fixed');
-  })
-
-  closeBtn.addEventListener('click', () => {
-    popup.classList.remove('active');
-    body.classList.remove('fixed');
-  })
-
-  popupBg.addEventListener('click', () => {
-    popup.classList.remove('active');
-    body.classList.remove('fixed');
-  })
-}
+openOrClosePopup('.js_call_back', '.js_call_back_open_btn', '.js_call_back_close_btn', '.js_call_back_bg');

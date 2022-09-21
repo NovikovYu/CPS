@@ -21,11 +21,14 @@
     height: 100vh;
 
     & .header__content {
+      display: flex;
+      flex-direction: column;
       width: 100%;
       max-width: 360px;
       height: 100vh;
       padding: 15px 25px 30px 25px;
       background: $white;
+      overflow: auto;
     }
 
     & .header__nav {
@@ -35,6 +38,7 @@
     & .header__btns-list {
       display: flex;
       position: relative;
+      margin-top: auto;
       padding: 0;
 
       @media (min-width: 768px) {
@@ -82,7 +86,7 @@
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-    padding: 20px 15px;
+    padding: 17px 15px;
 
     @media (min-width: 1366px) {
       position: relative;
